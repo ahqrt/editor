@@ -159,7 +159,9 @@ export default function usePageList({
       Object.keys(res.data.meta.pagination).forEach((key) => {
         pagination[key] = res.data.meta.pagination[key];
       });
-      pageData.value = [...pageData.value, ...list].filter((item) => item.name !== '星球');
+      pageData.value = [...pageData.value, ...list].filter(
+        (item) => item.name !== '星球' && item.name !== '交流' && item.name !== '物联网二维码'
+      );
     } catch (error) {
       console.log(error);
     }
