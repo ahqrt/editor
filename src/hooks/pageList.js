@@ -160,7 +160,11 @@ export default function usePageList({
         pagination[key] = res.data.meta.pagination[key];
       });
       pageData.value = [...pageData.value, ...list].filter(
-        (item) => item.name !== '星球' && item.name !== '交流' && item.name !== '物联网二维码'
+        (item) =>
+          item.name !== '星球' &&
+          item.name !== '交流' &&
+          item.name !== '物联网二维码' &&
+          item.name !== '8月'
       );
     } catch (error) {
       console.log(error);
